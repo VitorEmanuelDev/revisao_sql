@@ -220,7 +220,7 @@ WHERE gravacao.data_gravacao LIKE "2004%"
 SELECT cantor.nome_cantor, MAX (gravacao.data_gravacao) AS data_ultima_gravacao
 FROM cantor
 JOIN  gravacao ON  cantor.cod_cantor = gravacao.cod_cantor
-GROUP BY cantor.nome_cantor
+GROUP BY cantor.nome_cantor ORDER BY data_ultima_gravacao DESC
 
 #Questao 7
 
